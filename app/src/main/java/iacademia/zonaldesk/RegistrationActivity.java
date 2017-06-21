@@ -20,25 +20,27 @@ public class RegistrationActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-    /*    SharedPreferences p= PreferenceManager.getDefaultSharedPreferences(this);
+    SharedPreferences p= PreferenceManager.getDefaultSharedPreferences(this);
 
 
         boolean firstInstall=p.getBoolean("FIRST_INSTALL",true);
         p.edit().putBoolean("FIRST_INSTALL",false).apply();
-        //If the app is opened first after installation, Redirect to the Home Activity
-        //else continue with the Registration Activity
-        //Note that after entering to HomeActivity Registration Activity must be removed from the back stack by mentioning in the manifest file
-        if(!firstInstall){
+        boolean isVerified = p.getBoolean("VERIFICATION_STATUS",false);
 
+        //Only If the entry is not immediate after first install and if the user is verified , Redirect to the Home Activity
+        //else continue with the Registration Activity
+        //Note: Include the line "SharedPreferences.edit().putBoolean("VERIFICATION_STATUS",true).apply()" once the verification is done
+        //Note that after entering to HomeActivity Registration Activity must be removed from the back stack by mentioning in the manifest file
+        if(!firstInstall & isVerified){
+            p.edit().putBoolean("VERIFICATION_STATUS",true).apply();//I ve included it here to make the app stable.
+            // Remove this and update the status once the verification is done
             Intent i = new Intent(this,HomeActivity.class);
             startActivity(i);
         }
-*/
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration);
-      //  Drawable tempDrawable = getResources().getDrawable(R.drawable.try1);
-      //  LayerDrawable bubble = (LayerDrawable) tempDrawable;
-       // GradientDrawable rightRect = (GradientDrawable) bubble.findDrawableByLayerId(R.id.rightRect);
+
 
 
     }
