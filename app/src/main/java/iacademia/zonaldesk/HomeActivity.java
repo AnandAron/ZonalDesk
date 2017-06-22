@@ -73,7 +73,7 @@ public class HomeActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
     }
     public void queryForm(View view){
-        Intent i = new Intent(this,Queryform.class);
+        Intent i = new Intent(this,iacademia.zonaldesk.Queryform.class);
         startActivity(i);
     }
     @Override

@@ -5,17 +5,75 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/frag_new_req"
+    android:background="@color/colorPrimary"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="iacademia.zonaldesk.HomeActivity"
     tools:showIn="@layout/app_bar_home">
 
 
-  <ImageButton
-      android:id="@+id/imageButton2"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_centerHorizontal="true"
-      android:layout_centerVertical="true"
-      android:background="@drawable/circular_btn"
-      app:srcCompat="@drawable/plumbing-icon-white" />
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:foregroundGravity="center_horizontal"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        >
+        <RelativeLayout
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:padding="20dp">
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:onClick="queryForm"
+                android:background="@drawable/plumbing"
+                android:clickable="true"
+            /></RelativeLayout>
+        <RelativeLayout
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:padding="20dp">
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/carpenting"
+                android:clickable="true"
+                android:onClick="queryForm"
+                /></RelativeLayout>
+        <RelativeLayout
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:padding="20dp">
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/elec"
+                android:clickable="true"
+                android:onClick="queryForm"
+                /></RelativeLayout>
+        <RelativeLayout
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:padding="20dp">
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/repairs"
+                android:clickable="true"
+                android:onClick="queryForm"
+                /></RelativeLayout>
+        <RelativeLayout
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:padding="20dp">
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/bricks"
+                android:clickable="true"
+                android:onClick="queryForm"
+                /></RelativeLayout>
+    </GridLayout>
+
 </RelativeLayout>
